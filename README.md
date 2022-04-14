@@ -1,0 +1,1 @@
+Install packages: pytest, selenium, webdrive-manager.
