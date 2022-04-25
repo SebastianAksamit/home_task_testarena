@@ -25,6 +25,3 @@ class AddNewProjectPage:
 
     def is_success(self):
         self.browser.find_element(By.ID, 'j_info_box')
-
-    def is_success(self):
-        self.browser.find_element(By.ID, 'j_info_box')
