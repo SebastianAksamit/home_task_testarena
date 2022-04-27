@@ -20,16 +20,22 @@ def browser():
 
 def test_create_new_project_in_admin_panel(browser):
     login_page = LoginPage(browser)
+    login_page.wait_for_load_login_page()
     login_page.login(config.login, config.password)
+
     home_page = HomePage(browser)
     home_page.go_to_admin_panel()
+
     admin_page = AdminPage(browser)
     admin_page.wait_for_load_admin_page()
     admin_page.add_new_project()
+
     add_project_page = AddNewProjectPage(browser)
     add_project_page.add_new_project()
     add_project_page.is_success()
+
     project_view_page = ProjectViewPage(browser)
     project_view_page.go_to_projects()
+
     projects_page = ProjectsPage(browser)
     projects_page.search_new_added_project()
