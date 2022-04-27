@@ -24,6 +24,7 @@ def test_create_new_project_in_admin_panel(browser):
     login_page.login(config.login, config.password)
 
     home_page = HomePage(browser)
+    home_page.wait_for_load_home_page()
     home_page.go_to_admin_panel()
 
     admin_page = AdminPage(browser)
