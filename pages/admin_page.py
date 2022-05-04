@@ -14,6 +14,3 @@ class AdminPage:
 
     def add_new_project(self):
         self.browser.find_element(By.CLASS_NAME, 'button_link_li').click()
-
-
-
